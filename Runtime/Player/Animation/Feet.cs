@@ -39,12 +39,12 @@ namespace BIMOS
             _groundVelocity = Vector3.zero;
 
             if (groundBody as Rigidbody)
-                _groundVelocity = (groundBody as Rigidbody).linearVelocity;
+                _groundVelocity = (groundBody as Rigidbody).velocity;
 
             if (groundBody as ArticulationBody)
-                _groundVelocity = (groundBody as ArticulationBody).linearVelocity;
+                _groundVelocity = (groundBody as ArticulationBody).velocity;
 
-            _pelvisVelocity = Vector3.ProjectOnPlane(_pelvisRigidbody.linearVelocity - _groundVelocity, Vector3.up);
+            _pelvisVelocity = Vector3.ProjectOnPlane(_pelvisRigidbody.velocity - _groundVelocity, Vector3.up);
             _leftFoot.Transform.position += _groundVelocity * Time.deltaTime;
             _rightFoot.Transform.position += _groundVelocity * Time.deltaTime;
             UpdateTarget(_leftFoot);

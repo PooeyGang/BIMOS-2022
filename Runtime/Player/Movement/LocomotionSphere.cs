@@ -11,7 +11,7 @@ namespace BIMOS
         float _maxSlopeAngle = 50f;
 
         [SerializeField]
-        private PhysicsMaterial _highFriction, _lowFriction;
+        private PhysicMaterial _highFriction, _lowFriction;
 
         private Rigidbody _locomotionSphereRigidbody;
         private SphereCollider _locomotionSphereCollider;

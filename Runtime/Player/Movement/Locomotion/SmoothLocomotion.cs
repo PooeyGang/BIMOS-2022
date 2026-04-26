@@ -73,7 +73,7 @@ namespace BIMOS
 
         private void Jumping()
         {
-            float verticalVelocity = _player.PhysicsRig.PelvisRigidbody.linearVelocity.y;
+            float verticalVelocity = _player.PhysicsRig.PelvisRigidbody.velocity.y;
 
             switch (_player.PhysicsRig.JumpState)
             {
@@ -166,10 +166,10 @@ namespace BIMOS
 
         private void AirAccelerate(Rigidbody rigidbody, Vector3 direction)
         {
-            Vector3 horizontalVelocity = new Vector3(rigidbody.linearVelocity.x, 0f, rigidbody.linearVelocity.z); //Flattens vector
+            Vector3 horizontalVelocity = new Vector3(rigidbody.velocity.x, 0f, rigidbody.velocity.z); //Flattens vector
 
             if (horizontalVelocity.magnitude < 1f) //Prevents infinite acceleration
-                rigidbody.linearVelocity += direction * _player.PhysicsRig.AirAcceleration * Time.fixedDeltaTime;
+                rigidbody.velocity += direction * _player.PhysicsRig.AirAcceleration * Time.fixedDeltaTime;
         }
     }
 }

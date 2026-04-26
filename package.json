@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "displayName": "BIMOS",
   "description": "Open-source physics-based VR character controller inspired by Boneworks",
-  "unity": "6000.0",
+  "unity": "2022.3.50f1",
   "documentationUrl": "https://github.com/KadenZombie8/BIMOS/wiki",
   "changelogUrl": "https://github.com/KadenZombie8/BIMOS/blob/main/CHANGELOG.md",
   "licensesUrl": "https://github.com/KadenZombie8/BIMOS/blob/main/LICENSE.md",
@@ -22,8 +22,8 @@
     "physics"
   ],
   "author": {
-    "name": "KadenZombie8",
-    "email": "kadenzombie8@gmail.com"
+    "name": "cheesy",
+    "email": "cheesygamesdev@gmail.com"
   },
   "samples": [
     {
